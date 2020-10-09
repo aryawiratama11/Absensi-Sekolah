@@ -8,20 +8,6 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      //   elevation: 0,
-      //   title: Center(
-      //     child: Text(
-      //       "Absensi Siswa",
-      //       style: TextStyle(
-      //         fontFamily: "Poppins-Bold",
-      //         color: primaryColor,
-      //         fontSize: 32,
-      //       ),
-      //     ),
-      //   ),
-      // ),
       body: Container(
         height: size.height,
         width: double.infinity,
@@ -90,13 +76,48 @@ class IntroScreen extends StatelessWidget {
               ),
               Container(
                 width: size.width * 0.9,
-                child: Text(
-                  "Dengan menggunakan aplikasi ini, kamu menyetujui Ketentuan Layanan dan Ketentuan Privasi.",
-                  style: TextStyle(
-                    fontFamily: "Poppins-Regular",
-                    color: blackColor,
-                    fontSize: 12,
-                  ),
+                child: Column(
+                  children: [
+                    Container(
+                      width: size.width * 0.9,
+                      child: Text(
+                        "Dengan menggunakan aplikasi ini, kamu menyetujui",
+                        style: TextStyle(
+                          fontFamily: "Poppins-Regular",
+                          color: blackColor,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Ketentuan Layanan ",
+                          style: TextStyle(
+                            fontFamily: "Poppins-Regular",
+                            color: darkColor,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          "dan ",
+                          style: TextStyle(
+                            fontFamily: "Poppins-Regular",
+                            color: blackColor,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          "Ketentuan Privasi.",
+                          style: TextStyle(
+                            fontFamily: "Poppins-Regular",
+                            color: darkColor,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               )
             ],
