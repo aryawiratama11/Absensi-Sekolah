@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final url = "https://github.com/hafidardiansyahh/";
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -101,7 +102,7 @@ class IntroScreen extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
-                            launch("https://github.com/hafidardiansyahh/");
+                            launch(url);
                           },
                           child: Text(
                             "Ketentuan Layanan ",
@@ -122,7 +123,7 @@ class IntroScreen extends StatelessWidget {
                         ),
                         InkWell(
                             onTap: () {
-                              launch("https://github.com/hafidardiansyahh/");
+                              launch(url);
                             },
                             child: Text(
                               "Ketentuan Privasi.",
