@@ -49,7 +49,12 @@ flutter:
     - assets/images/intro.svg
     - assets/images/school_list.svg
     - assets/images/sun.svg
-    - assets/images/sun2.svg
+    - assets/images/1.svg
+    - assets/images/2.svg
+    - assets/images/3.svg
+    - assets/images/4.svg
+    - assets/images/5.svg
+    - assets/images/6.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

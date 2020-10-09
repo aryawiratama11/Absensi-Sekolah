@@ -1,7 +1,7 @@
-import 'package:absensi_sekolah/components/rounded_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
+import 'package:absensi_sekolah/components/rounded_input_field.dart';
 
 class SchoolList extends StatefulWidget {
   @override
@@ -26,34 +26,59 @@ class _SchoolListState extends State<SchoolList> {
               top: 80,
               child: SvgPicture.asset("assets/images/school_list.svg")),
           Container(
-            height: size.height,
             width: double.infinity,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: size.height * 0.06,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: size.height * 0.06,
+                ),
+                Text(
+                  "Pilih sekolah kamu!",
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: blackColor,
+                    fontFamily: "Poppins-SemiBold",
                   ),
-                  Text(
-                    "Pilih sekolah kamu!",
-                    style: TextStyle(
-                        fontFamily: "Poppins-SemiBold",
+                ),
+                SizedBox(
+                  height: size.height * 0.01,
+                ),
+                RoundedInputField(
+                  icon: Icons.search,
+                  color: primaryColor,
+                  conColor: whiteColor,
+                  hintColor: grey4Color,
+                  onChanged: (value) {},
+                  hintText: "Masukkan nama sekolah kamu!",
+                ),
+              ],
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: double.infinity,
+              height: size.height * 0.74,
+              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40))),
+              child: Column(children: [
+                Row(
+                  children: [
+                    Text(
+                      "Daftar Sekolah",
+                      style: TextStyle(
+                        fontSize: 20,
                         color: blackColor,
-                        fontSize: 24),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.01,
-                  ),
-                  RoundedInputField(
-                    color: primaryColor,
-                    hintText: "Masukkan nama sekolah kamu!",
-                    hintColor: grey4Color,
-                    icon: Icons.search,
-                    conColor: whiteColor,
-                    onChanged: (value) {},
-                  )
-                ],
-              ),
+                        fontFamily: "Poppins-Medium",
+                      ),
+                    ),
+                  ],
+                ),
+              ]),
             ),
           ),
         ],
