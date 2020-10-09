@@ -1,7 +1,10 @@
-import 'package:absensi_sekolah/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
+import 'package:absensi_sekolah/screens/school_list.dart';
+import 'package:absensi_sekolah/utilities/constants.dart';
+import 'package:absensi_sekolah/components/rounded_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IntroScreen extends StatelessWidget {
   @override
@@ -68,7 +71,12 @@ class IntroScreen extends StatelessWidget {
                 height: size.height * 0.03,
               ),
               RoundedButton(
-                press: () {},
+                press: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return SchoolList();
+                  }));
+                },
                 text: "Lanjut",
               ),
               SizedBox(
@@ -91,12 +99,17 @@ class IntroScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
-                          "Ketentuan Layanan ",
-                          style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: darkColor,
-                            fontSize: 12,
+                        InkWell(
+                          onTap: () {
+                            launch("https://github.com/hafidardiansyahh/");
+                          },
+                          child: Text(
+                            "Ketentuan Layanan ",
+                            style: TextStyle(
+                              fontFamily: "Poppins-Regular",
+                              color: darkColor,
+                              fontSize: 12,
+                            ),
                           ),
                         ),
                         Text(
@@ -107,14 +120,18 @@ class IntroScreen extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        Text(
-                          "Ketentuan Privasi.",
-                          style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: darkColor,
-                            fontSize: 12,
-                          ),
-                        ),
+                        InkWell(
+                            onTap: () {
+                              launch("https://github.com/hafidardiansyahh/");
+                            },
+                            child: Text(
+                              "Ketentuan Privasi.",
+                              style: TextStyle(
+                                fontFamily: "Poppins-Regular",
+                                color: darkColor,
+                                fontSize: 12,
+                              ),
+                            )),
                       ],
                     ),
                   ],
