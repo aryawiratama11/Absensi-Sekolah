@@ -30,6 +30,7 @@ class _SchoolListState extends State<SchoolList> {
               child: SvgPicture.asset("assets/images/house.svg")),
           Container(
             width: double.infinity,
+            height: size.height,
             child: Column(
               children: [
                 SizedBox(
@@ -66,8 +67,8 @@ class _SchoolListState extends State<SchoolList> {
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40))),
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
               child: Column(children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

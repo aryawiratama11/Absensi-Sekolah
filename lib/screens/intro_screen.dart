@@ -40,15 +40,12 @@ class IntroScreen extends StatelessWidget {
               SizedBox(
                 height: size.height * 0.08,
               ),
-              Container(
-                width: size.width * 0.9,
-                child: Text(
-                  "Ayo kelola kehadiran kamu!",
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: blackColor,
-                    fontFamily: "Poppins-SemiBold",
-                  ),
+              Text(
+                "Ayo kelola kehadiran kamu!",
+                style: TextStyle(
+                  fontSize: 22,
+                  color: blackColor,
+                  fontFamily: "Poppins-SemiBold",
                 ),
               ),
               SizedBox(
@@ -57,12 +54,13 @@ class IntroScreen extends StatelessWidget {
               Container(
                 width: size.width * 0.9,
                 child: Text(
-                  "Lebih mudah dan efesien mengelola kehadiran kamu di sekolah.",
+                  "Lebih mudah dan efesien mengelola \nkehadiran kamu di sekolah.",
                   style: TextStyle(
                     fontSize: 14,
                     color: blackColor,
                     fontFamily: "Poppins-Regular",
                   ),
+                  textAlign: TextAlign.center,
                 ),
               ),
               SizedBox(
@@ -84,52 +82,53 @@ class IntroScreen extends StatelessWidget {
                 width: size.width * 0.9,
                 child: Column(
                   children: [
-                    Container(
-                      width: size.width * 0.9,
-                      child: Text(
-                        "Dengan menggunakan aplikasi ini, kamu",
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: blackColor,
-                          fontFamily: "Poppins-Regular",
-                        ),
+                    Text(
+                      "Dengan menggunakan aplikasi ini, kamu",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: blackColor,
+                        fontFamily: "Poppins-Regular",
                       ),
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          "menyetujui  ",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: blackColor,
-                            fontFamily: "Poppins-Regular",
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "menyetujui ",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: blackColor,
+                              fontFamily: "Poppins-Regular",
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Ketentuan Layanan ",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: darkColor,
-                            fontFamily: "Poppins-Regular",
+                          Text(
+                            "Ketentuan Layanan ",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: darkColor,
+                              fontFamily: "Poppins-Regular",
+                            ),
                           ),
-                        ),
-                        Text(
-                          "dan ",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: blackColor,
-                            fontFamily: "Poppins-Regular",
+                          Text(
+                            "dan ",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: blackColor,
+                              fontFamily: "Poppins-Regular",
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Ketentuan Privasi.",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: darkColor,
-                            fontFamily: "Poppins-Regular",
+                          Text(
+                            "Ketentuan Privasi.",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: darkColor,
+                              fontFamily: "Poppins-Regular",
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),

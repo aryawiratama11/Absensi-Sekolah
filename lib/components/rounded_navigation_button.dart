@@ -17,6 +17,8 @@ class RoundedNavigatonButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: Container(
+        // width: size.width * 0.13,
+        // height: size.height * 0.06,
         width: 50,
         height: 50,
         decoration: BoxDecoration(
