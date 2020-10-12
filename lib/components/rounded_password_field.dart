@@ -2,22 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/components/text_field_container.dart';
 
-class RoundedInputField extends StatelessWidget {
-  final Color color;
-  final IconData icon;
+class RoundedPasswordField extends StatelessWidget {
   final Color conColor;
-  final String hintText;
-  final Color hintColor;
   final ValueChanged<String> onChanged;
 
-  const RoundedInputField(
-      {Key key,
-      this.icon,
-      this.color,
-      this.conColor,
-      this.hintText,
-      this.hintColor,
-      this.onChanged})
+  const RoundedPasswordField({Key key, this.conColor, this.onChanged})
       : super(key: key);
 
   @override
@@ -25,19 +14,24 @@ class RoundedInputField extends StatelessWidget {
     return TextFieldContainer(
       conColor: conColor,
       child: TextField(
-        cursorColor: color,
+        obscureText: true,
         onChanged: onChanged,
+        cursorColor: primaryColor,
         style: TextStyle(color: blackColor),
         decoration: InputDecoration(
             icon: Icon(
-              icon,
-              color: color,
+              Icons.lock,
+              color: primaryColor,
             ),
-            fillColor: color,
-            hintText: hintText,
-            border: InputBorder.none,
+            suffixIcon: Icon(
+              Icons.visibility,
+              color: primaryColor,
+            ),
+            fillColor: primaryColor,
+            hintText: "Your Password",
             hintStyle: TextStyle(
-                color: hintColor, fontFamily: "Poppins-Regular", fontSize: 14)),
+                color: lightColor, fontFamily: "Poppins-Regular", fontSize: 14),
+            border: InputBorder.none),
       ),
     );
   }

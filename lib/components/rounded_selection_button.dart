@@ -7,14 +7,14 @@ class RoundedSelectionButton extends StatelessWidget {
   final String desc;
   final String title;
   final IconData icon;
-  final Function press;
+  final Function onTap;
 
   const RoundedSelectionButton({
     Key key,
     this.desc,
     this.icon,
     this.title,
-    this.press,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -53,7 +53,7 @@ class RoundedSelectionButton extends StatelessWidget {
           ),
         ),
         RoundedNavigatonButton(
-          onTap: () {},
+          onTap: onTap,
           icon: icon,
         )
       ]),

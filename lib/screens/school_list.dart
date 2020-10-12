@@ -1,9 +1,10 @@
-import 'package:absensi_sekolah/components/rounded_filter_button.dart';
-import 'package:absensi_sekolah/components/rounded_selection_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
+import 'package:absensi_sekolah/screens/signin_screen.dart';
 import 'package:absensi_sekolah/components/rounded_input_field.dart';
+import 'package:absensi_sekolah/components/rounded_filter_button.dart';
+import 'package:absensi_sekolah/components/rounded_selection_button.dart';
 
 class SchoolList extends StatefulWidget {
   @override
@@ -87,12 +88,31 @@ class _SchoolListState extends State<SchoolList> {
                   ],
                 ),
                 SingleChildScrollView(
-                    child: RoundedSelectionButton(
-                  title: "SMKN 4 Malang",
-                  desc: "Loremin, spummmmmmmmmmmmmmminspummmmmmmmmmmmmmm",
-                  icon: Icons.navigate_next,
-                  press: () {},
-                )),
+                  child: RoundedSelectionButton(
+                    title: "SMKN 4 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                ),
+                SingleChildScrollView(
+                  child: RoundedSelectionButton(
+                    title: "SMKN 3 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                ),
               ]),
             ),
           ),
