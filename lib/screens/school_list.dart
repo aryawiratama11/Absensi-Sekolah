@@ -1,4 +1,5 @@
-import 'package:absensi_sekolah/components/rounded_filter.dart';
+import 'package:absensi_sekolah/components/rounded_filter_button.dart';
+import 'package:absensi_sekolah/components/rounded_selection_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -51,7 +52,7 @@ class _SchoolListState extends State<SchoolList> {
                   conColor: whiteColor,
                   hintColor: grey4Color,
                   onChanged: (value) {},
-                  hintText: "Masukkan nama sekolah kamu!",
+                  hintText: "Masukkan nama sekolah!",
                 ),
               ],
             ),
@@ -81,11 +82,18 @@ class _SchoolListState extends State<SchoolList> {
                         fontFamily: "Poppins-Medium",
                       ),
                     ),
-                    RoundedFilter(
+                    RoundedFilterButton(
                       press: () {},
                     )
                   ],
                 ),
+                SingleChildScrollView(
+                    child: RoundedSelectionButton(
+                  conColor: greyColor,
+                  title: "SMKN 4 Malang",
+                  desc: "Loreminspummmmmmmmmmmmmmminspummmmmmmmmmmmmmm",
+                  icon: Icons.ac_unit_outlined,
+                )),
               ]),
             ),
           ),
