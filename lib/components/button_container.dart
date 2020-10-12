@@ -3,9 +3,8 @@ import 'package:absensi_sekolah/utilities/constants.dart';
 
 class ButtonContainer extends StatelessWidget {
   final Widget child;
-  final Color conColor;
 
-  const ButtonContainer({Key key, this.conColor, this.child}) : super(key: key);
+  const ButtonContainer({Key key, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class ButtonContainer extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(vertical: 5),
       decoration: BoxDecoration(
-          color: conColor, borderRadius: BorderRadius.circular(30)),
+          color: greyColor, borderRadius: BorderRadius.circular(30)),
       child: child,
     );
   }

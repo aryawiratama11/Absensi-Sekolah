@@ -7,8 +7,6 @@ class RoundedSelectionButton extends StatelessWidget {
   final String desc;
   final String title;
   final IconData icon;
-  final Color iconColor;
-  final Color conColor;
   final Function press;
 
   const RoundedSelectionButton({
@@ -17,8 +15,6 @@ class RoundedSelectionButton extends StatelessWidget {
     this.icon,
     this.title,
     this.press,
-    this.conColor,
-    this.iconColor,
   }) : super(key: key);
 
   @override
@@ -26,7 +22,6 @@ class RoundedSelectionButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return ButtonContainer(
-      conColor: conColor,
       child: Row(children: [
         Container(
           width: size.width * 0.15,
@@ -59,7 +54,7 @@ class RoundedSelectionButton extends StatelessWidget {
         ),
         RoundedNavigatonButton(
           onTap: () {},
-          icon: Icons.navigate_next,
+          icon: icon,
         )
       ]),
     );

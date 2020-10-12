@@ -61,9 +61,7 @@ class _SchoolListState extends State<SchoolList> {
             alignment: Alignment.bottomCenter,
             child: Container(
               width: double.infinity,
-              height: MediaQuery.of(context).orientation == Orientation.portrait
-                  ? size.height * 0.75
-                  : size.height * 0.5,
+              height: size.height * 0.75,
               padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -89,10 +87,10 @@ class _SchoolListState extends State<SchoolList> {
                 ),
                 SingleChildScrollView(
                     child: RoundedSelectionButton(
-                  conColor: greyColor,
                   title: "SMKN 4 Malang",
-                  desc: "Loreminspummmmmmmmmmmmmmminspummmmmmmmmmmmmmm",
-                  icon: Icons.ac_unit_outlined,
+                  desc: "Loremin, spummmmmmmmmmmmmmminspummmmmmmmmmmmmmm",
+                  icon: Icons.navigate_next,
+                  press: () {},
                 )),
               ]),
             ),
