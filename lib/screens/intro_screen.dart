@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/school_list.dart';
 import 'package:absensi_sekolah/components/rounded_button.dart';
@@ -23,9 +22,9 @@ class IntroScreen extends StatelessWidget {
                 child: Text(
                   "Absensi Siswa",
                   style: TextStyle(
-                    fontFamily: "Poppins-Bold",
-                    color: primaryColor,
                     fontSize: 32,
+                    color: primaryColor,
+                    fontFamily: "Poppins-Bold",
                   ),
                 ),
               ),
@@ -34,7 +33,7 @@ class IntroScreen extends StatelessWidget {
               ),
               Center(
                 child: SvgPicture.asset(
-                  "assets/images/3.svg",
+                  "assets/images/data.svg",
                   height: size.height * 0.35,
                 ),
               ),
@@ -46,9 +45,9 @@ class IntroScreen extends StatelessWidget {
                 child: Text(
                   "Ayo kelola kehadiran kamu!",
                   style: TextStyle(
-                    fontFamily: "Poppins-SemiBold",
-                    color: blackColor,
                     fontSize: 22,
+                    color: blackColor,
+                    fontFamily: "Poppins-SemiBold",
                   ),
                 ),
               ),
@@ -60,9 +59,9 @@ class IntroScreen extends StatelessWidget {
                 child: Text(
                   "Lebih mudah dan efesien mengelola kehadiran kamu di sekolah.",
                   style: TextStyle(
-                    fontFamily: "Poppins-Regular",
-                    color: blackColor,
                     fontSize: 14,
+                    color: blackColor,
+                    fontFamily: "Poppins-Regular",
                   ),
                 ),
               ),
@@ -90,9 +89,9 @@ class IntroScreen extends StatelessWidget {
                       child: Text(
                         "Dengan menggunakan aplikasi ini, kamu",
                         style: TextStyle(
-                          fontFamily: "Poppins-Regular",
-                          color: blackColor,
                           fontSize: 12,
+                          color: blackColor,
+                          fontFamily: "Poppins-Regular",
                         ),
                       ),
                     ),
@@ -101,35 +100,35 @@ class IntroScreen extends StatelessWidget {
                         Text(
                           "menyetujui  ",
                           style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: blackColor,
                             fontSize: 12,
+                            color: blackColor,
+                            fontFamily: "Poppins-Regular",
                           ),
                         ),
                         Text(
                           "Ketentuan Layanan ",
                           style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: darkColor,
                             fontSize: 12,
+                            color: darkColor,
+                            fontFamily: "Poppins-Regular",
                           ),
                         ),
                         Text(
                           "dan ",
                           style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: blackColor,
                             fontSize: 12,
+                            color: blackColor,
+                            fontFamily: "Poppins-Regular",
                           ),
                         ),
                         Text(
                           "Ketentuan Privasi.",
                           style: TextStyle(
-                            fontFamily: "Poppins-Regular",
-                            color: darkColor,
                             fontSize: 12,
+                            color: darkColor,
+                            fontFamily: "Poppins-Regular",
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],

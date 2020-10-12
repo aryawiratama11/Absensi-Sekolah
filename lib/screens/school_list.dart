@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/components/rounded_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -14,17 +15,18 @@ class _SchoolListState extends State<SchoolList> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: lightColor,
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Positioned(
-            left: 0,
             top: 0,
+            left: 0,
             child: SvgPicture.asset("assets/images/sun.svg"),
           ),
           Positioned(
-              left: 0,
-              top: 80,
-              child: SvgPicture.asset("assets/images/school_list.svg")),
+              left: -10,
+              top: 5,
+              child: SvgPicture.asset("assets/images/house.svg")),
           Container(
             width: double.infinity,
             child: Column(
@@ -58,7 +60,9 @@ class _SchoolListState extends State<SchoolList> {
             alignment: Alignment.bottomCenter,
             child: Container(
               width: double.infinity,
-              height: size.height * 0.74,
+              height: MediaQuery.of(context).orientation == Orientation.portrait
+                  ? size.height * 0.75
+                  : size.height * 0.5,
               padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -67,6 +71,7 @@ class _SchoolListState extends State<SchoolList> {
                       topRight: Radius.circular(40))),
               child: Column(children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Daftar Sekolah",
@@ -76,6 +81,9 @@ class _SchoolListState extends State<SchoolList> {
                         fontFamily: "Poppins-Medium",
                       ),
                     ),
+                    RoundedFilter(
+                      press: () {},
+                    )
                   ],
                 ),
               ]),

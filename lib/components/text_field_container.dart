@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldContainer extends StatelessWidget {
@@ -11,9 +12,9 @@ class TextFieldContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      width: size.width * 0.8,
       margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-      width: size.width * 0.8,
       decoration: BoxDecoration(
           color: conColor, borderRadius: BorderRadius.circular(30)),
       child: child,
