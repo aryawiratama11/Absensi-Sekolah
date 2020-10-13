@@ -4,6 +4,5 @@
   <li>Dribble - hafidardiansyahh</li>
   <li>Instagram - hafidardiansyahh</li>
 </ul>
-</br>
 <h2>Demo App</h2>
 <img src="demo.png">
