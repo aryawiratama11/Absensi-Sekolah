@@ -1,5 +1,9 @@
 # Absensi Siswa App building with Flutter
-Dribble - hafidardiansyahh
-Instagram - hafidardiansyahh
-Demo App
+<h2>My Social Media</h2>
+<ul>
+  <li>Dribble - hafidardiansyahh</li>
+  <li>Instagram - hafidardiansyahh</li>
+</ul>
+</br>
+<h2>Demo App</h2>
 <img src="demo.png">
