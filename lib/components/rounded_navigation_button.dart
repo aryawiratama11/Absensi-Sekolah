@@ -13,7 +13,6 @@ class RoundedNavigatonButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: Container(

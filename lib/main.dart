@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:absensi_sekolah/screens/intro_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(DevicePreview(
+    builder: (context) => MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]);
+    DevicePreview.of(context).locale;
 
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Absensi Siswa',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
