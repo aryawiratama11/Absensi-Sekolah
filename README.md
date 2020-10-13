@@ -1,4 +1,4 @@
-# Absensi Siswa App building with Flutter
+# Absensi Sekolah App building with Flutter
 <h2>My Social Media</h2>
 <ul>
   <li>Dribbble - hafidardiansyahh</li>
