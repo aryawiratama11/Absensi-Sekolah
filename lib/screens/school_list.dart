@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/signin_screen.dart';
 import 'package:absensi_sekolah/components/rounded_input_field.dart';
@@ -14,7 +15,8 @@ class SchoolList extends StatefulWidget {
 class _SchoolListState extends State<SchoolList> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
+
     return Scaffold(
       backgroundColor: lightColor,
       resizeToAvoidBottomInset: false,
@@ -27,26 +29,24 @@ class _SchoolListState extends State<SchoolList> {
           ),
           Positioned(
               left: -10,
-              top: 5,
+              top: 80,
               child: SvgPicture.asset("assets/images/house.svg")),
           Container(
             width: double.infinity,
-            height: size.height,
+            height: SizeConfig.screenHeight * 0.15,
+            margin: EdgeInsets.symmetric(
+              vertical: SizeConfig.blockVertical * 3,
+            ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SizedBox(
-                  height: size.height * 0.06,
-                ),
                 Text(
                   "Pilih sekolah kamu!",
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: SizeConfig.blockVertical * 2.5,
                     color: blackColor,
                     fontFamily: "Poppins-SemiBold",
                   ),
-                ),
-                SizedBox(
-                  height: size.height * 0.01,
                 ),
                 RoundedInputField(
                   icon: Icons.search,
@@ -63,8 +63,8 @@ class _SchoolListState extends State<SchoolList> {
             alignment: Alignment.bottomCenter,
             child: Container(
               width: double.infinity,
-              height: size.height * 0.75,
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              height: SizeConfig.blockVertical * 50,
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -77,7 +77,7 @@ class _SchoolListState extends State<SchoolList> {
                     Text(
                       "Daftar Sekolah",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: SizeConfig.blockVertical * 2.2,
                         color: blackColor,
                         fontFamily: "Poppins-Medium",
                       ),

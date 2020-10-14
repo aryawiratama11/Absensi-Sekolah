@@ -1,5 +1,6 @@
-import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:absensi_sekolah/utilities/layout.dart';
+import 'package:absensi_sekolah/utilities/constants.dart';
 
 class RoundedFilterButton extends StatelessWidget {
   final Function press;
@@ -11,17 +12,22 @@ class RoundedFilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
+
     return Container(
-        width: size.width * 0.25,
-        height: size.height * 0.05,
-        margin: EdgeInsets.symmetric(vertical: 10),
+        width: SizeConfig.blockHorizontal * 25,
+        height: SizeConfig.blockVertical * 5,
+        margin: EdgeInsets.symmetric(
+          vertical: SizeConfig.blockVertical * 1,
+        ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: FlatButton(
               onPressed: press,
               color: superLightColor,
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.blockVertical * 1,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -32,7 +38,7 @@ class RoundedFilterButton extends StatelessWidget {
                   Text(
                     "Filter",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: SizeConfig.blockVertical * 2,
                       color: blackColor,
                       fontFamily: "Poppins-Medium",
                     ),

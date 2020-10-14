@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/ui/base_widget.dart';
+import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/school_list.dart';
 import 'package:absensi_sekolah/components/rounded_button.dart';
@@ -8,57 +9,59 @@ import 'package:absensi_sekolah/components/rounded_button.dart';
 class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
+
     return BaseWidget(builder: (context, sizingInformation) {
       return Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              "Absensi Siswa",
+              style: TextStyle(
+                fontSize: SizeConfig.blockVertical * 4,
+                color: primaryColor,
+                fontFamily: "Poppins-Bold",
+              ),
+            ),
+          ),
+          backgroundColor: whiteColor,
+          elevation: 0,
+        ),
         body: Container(
-          height: size.height,
+          height: SizeConfig.screenHeight,
           width: double.infinity,
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
-                  height: size.height * 0.08,
-                ),
-                Center(
-                  child: Text(
-                    "Absensi Siswa",
-                    style: TextStyle(
-                      fontSize: 32,
-                      color: primaryColor,
-                      fontFamily: "Poppins-Bold",
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: size.height * 0.08,
+                  height: SizeConfig.blockVertical * 3,
                 ),
                 Center(
                   child: SvgPicture.asset(
                     "assets/images/data.svg",
-                    height: size.height * 0.35,
+                    width: SizeConfig.screenWidth * 0.80,
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.08,
+                  height: SizeConfig.blockVertical * 3,
                 ),
                 Text(
                   "Ayo kelola kehadiran kamu!",
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: SizeConfig.blockVertical * 2.8,
                     color: blackColor,
                     fontFamily: "Poppins-SemiBold",
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.01,
+                  height: SizeConfig.blockVertical * 1,
                 ),
                 Container(
-                  width: size.width * 0.9,
+                  width: SizeConfig.blockHorizontal * 100,
                   child: Text(
                     "Lebih mudah dan efesien mengelola \nkehadiran kamu di sekolah.",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: SizeConfig.blockVertical * 2,
                       color: blackColor,
                       fontFamily: "Poppins-Regular",
                     ),
@@ -66,7 +69,7 @@ class IntroScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: SizeConfig.blockVertical * 3,
                 ),
                 RoundedButton(
                   press: () {
@@ -78,16 +81,16 @@ class IntroScreen extends StatelessWidget {
                   text: "Lanjut",
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: SizeConfig.blockVertical * 3,
                 ),
                 Container(
-                  width: size.width * 0.9,
+                  width: SizeConfig.blockHorizontal * 100,
                   child: Column(
                     children: [
                       Text(
                         "Dengan menggunakan aplikasi ini, kamu",
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: SizeConfig.blockVertical * 1.5,
                           color: blackColor,
                           fontFamily: "Poppins-Regular",
                         ),
@@ -100,7 +103,7 @@ class IntroScreen extends StatelessWidget {
                             Text(
                               "menyetujui ",
                               style: TextStyle(
-                                fontSize: 12,
+                                fontSize: SizeConfig.blockVertical * 1.5,
                                 color: blackColor,
                                 fontFamily: "Poppins-Regular",
                               ),
@@ -108,7 +111,7 @@ class IntroScreen extends StatelessWidget {
                             Text(
                               "Ketentuan Layanan ",
                               style: TextStyle(
-                                fontSize: 12,
+                                fontSize: SizeConfig.blockVertical * 1.5,
                                 color: darkColor,
                                 fontFamily: "Poppins-Regular",
                               ),
@@ -116,7 +119,7 @@ class IntroScreen extends StatelessWidget {
                             Text(
                               "dan ",
                               style: TextStyle(
-                                fontSize: 12,
+                                fontSize: SizeConfig.blockVertical * 1.5,
                                 color: blackColor,
                                 fontFamily: "Poppins-Regular",
                               ),
@@ -124,7 +127,7 @@ class IntroScreen extends StatelessWidget {
                             Text(
                               "Ketentuan Privasi.",
                               style: TextStyle(
-                                fontSize: 12,
+                                fontSize: SizeConfig.blockVertical * 1.5,
                                 color: darkColor,
                                 fontFamily: "Poppins-Regular",
                               ),

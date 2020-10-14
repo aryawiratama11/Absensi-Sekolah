@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/components/rounded_navigation_button.dart';
+import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/components/button_container.dart';
@@ -19,38 +20,37 @@ class RoundedSelectionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
 
     return ButtonContainer(
-      child: Row(children: [
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Container(
-          width: size.width * 0.15,
+          margin: EdgeInsets.only(
+            left: SizeConfig.blockHorizontal * 1.5,
+          ),
           child: Icon(
             Icons.school,
-            size: size.width * 0.08,
+            size: SizeConfig.blockVertical * 4,
             color: primaryColor,
           ),
         ),
-        Container(
-          width: size.width * 0.60,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: blackColor,
-                    fontFamily: "Poppins-Medium",
-                  )),
-              Text(desc,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: grey2Color,
-                    fontFamily: "Poppins-Regular",
-                  )),
-            ],
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(title,
+                style: TextStyle(
+                  fontSize: SizeConfig.blockVertical * 2,
+                  color: blackColor,
+                  fontFamily: "Poppins-Medium",
+                )),
+            Text(desc,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: SizeConfig.blockVertical * 1.5,
+                  color: grey2Color,
+                  fontFamily: "Poppins-Regular",
+                )),
+          ],
         ),
         RoundedNavigatonButton(
           onTap: onTap,
