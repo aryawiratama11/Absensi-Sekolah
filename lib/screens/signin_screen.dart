@@ -3,6 +3,7 @@ import 'package:absensi_sekolah/components/rounded_button.dart';
 import 'package:absensi_sekolah/components/rounded_password_field.dart';
 import 'package:absensi_sekolah/components/social_icon.dart';
 import 'package:absensi_sekolah/screens/school_list.dart';
+import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -17,19 +18,26 @@ class SigninScreen extends StatefulWidget {
 class _SigninScreenState extends State<SigninScreen> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
-        height: size.height,
+        height: SizeConfig.screenHeight,
         width: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: size.height * 0.06),
-              Container(
-                width: size.width * 0.9,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                width: SizeConfig.blockHorizontal * 60,
+                margin: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.end,
+
                   children: [
                     RoundedNavigatonButton(
                       onTap: () {
@@ -39,9 +47,6 @@ class _SigninScreenState extends State<SigninScreen> {
                         }));
                       },
                       icon: Icons.navigate_before,
-                    ),
-                    SizedBox(
-                      width: size.width * 0.12,
                     ),
                     Text(
                       "Masuk akun",
@@ -54,41 +59,38 @@ class _SigninScreenState extends State<SigninScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: size.height * 0.05),
-              SvgPicture.asset(
-                "assets/images/secure_data.svg",
-                height: size.height * 0.35,
-              ),
-              SizedBox(height: size.height * 0.05),
-              RoundedInputField(
-                color: primaryColor,
-                hintColor: lightColor,
-                onChanged: (value) {},
-                conColor: superLightColor,
-                hintText: "Masukkan email kamu!",
-                icon: Icons.supervised_user_circle,
-              ),
-              RoundedPasswordField(
-                conColor: superLightColor,
-                onChanged: (value) {},
-              ),
-              SizedBox(height: size.height * 0.01),
-              RoundedButton(
-                press: () {},
-                text: "Masuk",
-              ),
-              OrDivider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SocialIcon(
-                    icon: "assets/icons/google.svg",
-                    press: () {},
-                  ),
-                ],
-              )
-            ],
-          ),
+            ),
+            SvgPicture.asset(
+              "assets/images/secure_data.svg",
+              height: SizeConfig.blockVertical * 30,
+            ),
+            RoundedInputField(
+              color: primaryColor,
+              hintColor: lightColor,
+              onChanged: (value) {},
+              conColor: superLightColor,
+              hintText: "Masukkan email kamu!",
+              icon: Icons.supervised_user_circle,
+            ),
+            RoundedPasswordField(
+              conColor: superLightColor,
+              onChanged: (value) {},
+            ),
+            RoundedButton(
+              press: () {},
+              text: "Masuk",
+            ),
+            OrDivider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialIcon(
+                  icon: "assets/icons/google.svg",
+                  press: () {},
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );

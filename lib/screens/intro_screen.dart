@@ -13,133 +13,111 @@ class IntroScreen extends StatelessWidget {
 
     return BaseWidget(builder: (context, sizingInformation) {
       return Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text(
-              "Absensi Siswa",
-              style: TextStyle(
-                fontSize: SizeConfig.blockVertical * 4,
-                color: primaryColor,
-                fontFamily: "Poppins-Bold",
-              ),
-            ),
-          ),
-          backgroundColor: whiteColor,
-          elevation: 0,
-        ),
         body: Container(
           height: SizeConfig.screenHeight,
           width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: SizeConfig.blockVertical * 3,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                "Absensi Siswa",
+                style: TextStyle(
+                  fontSize: SizeConfig.blockVertical * 4,
+                  color: primaryColor,
+                  fontFamily: "Poppins-Bold",
                 ),
-                Center(
-                  child: SvgPicture.asset(
-                    "assets/images/data.svg",
-                    width: SizeConfig.screenWidth * 0.80,
-                  ),
+              ),
+              SizedBox(
+                height: SizeConfig.blockVertical * 1,
+              ),
+              Center(
+                child: SvgPicture.asset(
+                  "assets/images/data.svg",
+                  width: SizeConfig.screenWidth * 0.80,
                 ),
-                SizedBox(
-                  height: SizeConfig.blockVertical * 3,
+              ),
+              SizedBox(
+                height: SizeConfig.blockVertical * 1,
+              ),
+              Text(
+                "Ayo kelola kehadiran kamu!",
+                style: TextStyle(
+                  fontSize: SizeConfig.blockVertical * 2.8,
+                  color: blackColor,
+                  fontFamily: "Poppins-SemiBold",
                 ),
-                Text(
-                  "Ayo kelola kehadiran kamu!",
-                  style: TextStyle(
-                    fontSize: SizeConfig.blockVertical * 2.8,
-                    color: blackColor,
-                    fontFamily: "Poppins-SemiBold",
-                  ),
+              ),
+              Text(
+                "Lebih mudah dan efesien mengelola \nkehadiran kamu di sekolah.",
+                style: TextStyle(
+                  fontSize: SizeConfig.blockVertical * 2,
+                  color: blackColor,
+                  fontFamily: "Poppins-Regular",
                 ),
-                SizedBox(
-                  height: SizeConfig.blockVertical * 1,
-                ),
-                Container(
-                  width: SizeConfig.blockHorizontal * 100,
-                  child: Text(
-                    "Lebih mudah dan efesien mengelola \nkehadiran kamu di sekolah.",
+                textAlign: TextAlign.center,
+              ),
+              RoundedButton(
+                press: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return SchoolList();
+                  }));
+                },
+                text: "Lanjut",
+              ),
+              Column(
+                children: [
+                  Text(
+                    "Dengan menggunakan aplikasi ini, kamu",
                     style: TextStyle(
-                      fontSize: SizeConfig.blockVertical * 2,
+                      fontSize: SizeConfig.blockVertical * 1.5,
                       color: blackColor,
                       fontFamily: "Poppins-Regular",
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-                SizedBox(
-                  height: SizeConfig.blockVertical * 3,
-                ),
-                RoundedButton(
-                  press: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) {
-                      return SchoolList();
-                    }));
-                  },
-                  text: "Lanjut",
-                ),
-                SizedBox(
-                  height: SizeConfig.blockVertical * 3,
-                ),
-                Container(
-                  width: SizeConfig.blockHorizontal * 100,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Dengan menggunakan aplikasi ini, kamu",
-                        style: TextStyle(
-                          fontSize: SizeConfig.blockVertical * 1.5,
-                          color: blackColor,
-                          fontFamily: "Poppins-Regular",
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "menyetujui ",
+                          style: TextStyle(
+                            fontSize: SizeConfig.blockVertical * 1.5,
+                            color: blackColor,
+                            fontFamily: "Poppins-Regular",
+                          ),
                         ),
-                      ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "menyetujui ",
-                              style: TextStyle(
-                                fontSize: SizeConfig.blockVertical * 1.5,
-                                color: blackColor,
-                                fontFamily: "Poppins-Regular",
-                              ),
-                            ),
-                            Text(
-                              "Ketentuan Layanan ",
-                              style: TextStyle(
-                                fontSize: SizeConfig.blockVertical * 1.5,
-                                color: darkColor,
-                                fontFamily: "Poppins-Regular",
-                              ),
-                            ),
-                            Text(
-                              "dan ",
-                              style: TextStyle(
-                                fontSize: SizeConfig.blockVertical * 1.5,
-                                color: blackColor,
-                                fontFamily: "Poppins-Regular",
-                              ),
-                            ),
-                            Text(
-                              "Ketentuan Privasi.",
-                              style: TextStyle(
-                                fontSize: SizeConfig.blockVertical * 1.5,
-                                color: darkColor,
-                                fontFamily: "Poppins-Regular",
-                              ),
-                            ),
-                          ],
+                        Text(
+                          "Ketentuan Layanan ",
+                          style: TextStyle(
+                            fontSize: SizeConfig.blockVertical * 1.5,
+                            color: darkColor,
+                            fontFamily: "Poppins-Regular",
+                          ),
                         ),
-                      ),
-                    ],
+                        Text(
+                          "dan ",
+                          style: TextStyle(
+                            fontSize: SizeConfig.blockVertical * 1.5,
+                            color: blackColor,
+                            fontFamily: "Poppins-Regular",
+                          ),
+                        ),
+                        Text(
+                          "Ketentuan Privasi.",
+                          style: TextStyle(
+                            fontSize: SizeConfig.blockVertical * 1.5,
+                            color: darkColor,
+                            fontFamily: "Poppins-Regular",
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ],
-            ),
+                ],
+              ),
+            ],
           ),
         ),
       );
