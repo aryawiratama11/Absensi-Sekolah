@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
-import 'package:absensi_sekolah/screens/signin_screen.dart';
+import 'package:absensi_sekolah/screens/signin.dart';
 import 'package:absensi_sekolah/components/rounded_input_field.dart';
 import 'package:absensi_sekolah/components/rounded_filter_button.dart';
 import 'package:absensi_sekolah/components/rounded_selection_button.dart';
@@ -91,66 +91,66 @@ class _SchoolListState extends State<SchoolList> {
                   RoundedSelectionButton(
                     title: "SMKN 4 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),
                   RoundedSelectionButton(
                     title: "SMKN 3 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),
                   RoundedSelectionButton(
                     title: "SMKN 4 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),
                   RoundedSelectionButton(
                     title: "SMKN 3 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),
                   RoundedSelectionButton(
                     title: "SMKN 4 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),
                   RoundedSelectionButton(
                     title: "SMKN 3 Malang",
                     desc: "Malang",
-                    icon: Icons.navigate_next,
+                    icon: Icons.school,
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SigninScreen();
+                        return Signin();
                       }));
                     },
                   ),

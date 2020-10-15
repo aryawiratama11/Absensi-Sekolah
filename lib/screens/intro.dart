@@ -6,7 +6,7 @@ import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/school_list.dart';
 import 'package:absensi_sekolah/components/rounded_button.dart';
 
-class IntroScreen extends StatelessWidget {
+class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

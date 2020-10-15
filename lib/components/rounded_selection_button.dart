@@ -29,7 +29,7 @@ class RoundedSelectionButton extends StatelessWidget {
             left: SizeConfig.blockHorizontal * 1.5,
           ),
           child: Icon(
-            Icons.school,
+            icon,
             size: SizeConfig.blockVertical * 4,
             color: primaryColor,
           ),
@@ -54,7 +54,7 @@ class RoundedSelectionButton extends StatelessWidget {
         ),
         RoundedNavigatonButton(
           onTap: onTap,
-          icon: icon,
+          icon: Icons.navigate_next,
         )
       ]),
     );
