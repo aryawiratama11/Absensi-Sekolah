@@ -64,31 +64,31 @@ class _SchoolListState extends State<SchoolList> {
             child: Container(
               width: double.infinity,
               height: SizeConfig.blockVertical * 50,
-              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+              padding: EdgeInsets.only(top: 20, left: 20, right: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
-              child: Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Daftar Sekolah",
-                      style: TextStyle(
-                        fontSize: SizeConfig.blockVertical * 2.2,
-                        color: blackColor,
-                        fontFamily: "Poppins-Medium",
+              child: SingleChildScrollView(
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Daftar Sekolah",
+                        style: TextStyle(
+                          fontSize: SizeConfig.blockVertical * 2.2,
+                          color: blackColor,
+                          fontFamily: "Poppins-Medium",
+                        ),
                       ),
-                    ),
-                    RoundedFilterButton(
-                      press: () {},
-                    )
-                  ],
-                ),
-                SingleChildScrollView(
-                  child: RoundedSelectionButton(
+                      RoundedFilterButton(
+                        press: () {},
+                      )
+                    ],
+                  ),
+                  RoundedSelectionButton(
                     title: "SMKN 4 Malang",
                     desc: "Malang",
                     icon: Icons.navigate_next,
@@ -99,9 +99,7 @@ class _SchoolListState extends State<SchoolList> {
                       }));
                     },
                   ),
-                ),
-                SingleChildScrollView(
-                  child: RoundedSelectionButton(
+                  RoundedSelectionButton(
                     title: "SMKN 3 Malang",
                     desc: "Malang",
                     icon: Icons.navigate_next,
@@ -112,8 +110,52 @@ class _SchoolListState extends State<SchoolList> {
                       }));
                     },
                   ),
-                ),
-              ]),
+                  RoundedSelectionButton(
+                    title: "SMKN 4 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                  RoundedSelectionButton(
+                    title: "SMKN 3 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                  RoundedSelectionButton(
+                    title: "SMKN 4 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                  RoundedSelectionButton(
+                    title: "SMKN 3 Malang",
+                    desc: "Malang",
+                    icon: Icons.navigate_next,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return SigninScreen();
+                      }));
+                    },
+                  ),
+                ]),
+              ),
             ),
           ),
         ],
