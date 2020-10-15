@@ -54,9 +54,6 @@ class _DashboardState extends State<Dashboard> {
                           fontFamily: "Poppins-Medium",
                         ),
                       ),
-                      RoundedFilterButton(
-                        press: () {},
-                      )
                     ],
                   ),
                   RoundedSelectionButton(
