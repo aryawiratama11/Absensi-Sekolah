@@ -35,7 +35,7 @@ class _SigninState extends State<Signin> {
                 children: [
                   RoundedNavigatonButton(
                     onTap: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
                         return SchoolList();
                       }));
