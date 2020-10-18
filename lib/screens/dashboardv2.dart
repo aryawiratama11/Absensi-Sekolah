@@ -13,7 +13,7 @@ class _Dashboardv2State extends State<Dashboardv2> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-        backgroundColor: primaryColor,
+        backgroundColor: lightColor,
         body: Stack(children: [
           Positioned(
             top: 0,
@@ -21,24 +21,121 @@ class _Dashboardv2State extends State<Dashboardv2> {
             child: SvgPicture.asset("assets/images/sun.svg"),
           ),
           Positioned(
-            top: 150,
-            left: -2,
-            child: SvgPicture.asset("assets/images/house.svg"),
-          ),
+              top: size.height * 0.18,
+              left: -2,
+              child: SvgPicture.asset("assets/images/house.svg")),
+          RoundedProfileButton(),
           SelectionContainer()
         ]));
+  }
+}
+
+class RoundedProfileButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
+    return LayoutBuilder(builder: (context, contraints) {
+      if (contraints.maxHeight > 600) {
+        return Align(
+          alignment: Alignment.topCenter,
+          child: Container(
+            width: size.width * 0.9,
+            height: size.height * 0.07,
+            margin: EdgeInsets.symmetric(
+              vertical: size.height * 0.06,
+              horizontal: size.width * 0.04,
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+                color: greyColor, borderRadius: BorderRadius.circular(30)),
+            child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+              CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/profile.png")),
+              SizedBox(width: size.width * 0.02),
+              GestureDetector(
+                onTap: () {},
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Hi, Hafid",
+                        style: TextStyle(
+                          color: blackColor,
+                          fontFamily: "Poppins-Medium",
+                          fontSize: 18,
+                        )),
+                    Text("Siswa, XII RPL 3",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: grey2Color,
+                          fontFamily: "Poppins-Regular",
+                          fontSize: 12,
+                        )),
+                  ],
+                ),
+              ),
+            ]),
+          ),
+        );
+      } else {
+        return Align(
+          alignment: Alignment.topCenter,
+          child: Container(
+            width: size.width * 0.9,
+            height: size.height * 0.06,
+            margin: EdgeInsets.symmetric(
+              vertical: size.height * 0.04,
+              horizontal: size.width * 0.04,
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 6),
+            decoration: BoxDecoration(
+                color: greyColor, borderRadius: BorderRadius.circular(30)),
+            child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+              CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/profile.png")),
+              SizedBox(width: size.width * 0.02),
+              GestureDetector(
+                onTap: () {},
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Hi, Hafid",
+                        style: TextStyle(
+                          color: blackColor,
+                          fontFamily: "Poppins-Medium",
+                          fontSize: 16,
+                        )),
+                    Text("Siswa, XII RPL 3",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: grey2Color,
+                          fontFamily: "Poppins-Regular",
+                          fontSize: 10,
+                        )),
+                  ],
+                ),
+              ),
+            ]),
+          ),
+        );
+      }
+    });
   }
 }
 
 class SelectionContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Align(
       alignment: Alignment.bottomCenter,
       child: LayoutBuilder(builder: (context, constraints) {
         if (constraints.maxHeight > 600) {
           return Container(
-              height: 400,
+              height: size.height * 0.5,
               width: double.infinity,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -62,8 +159,8 @@ class SelectionContainer extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: Container(
-                        width: 90,
-                        height: 40,
+                        width: size.width * 0.25,
+                        height: size.height * 0.05,
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         decoration: BoxDecoration(
                             color: superLightColor,
@@ -113,7 +210,7 @@ class SelectionContainer extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: Container(
-                        width: 80,
+                        width: 85,
                         height: 35,
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         decoration: BoxDecoration(
