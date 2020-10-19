@@ -26,7 +26,7 @@ class RoundedProfileButtonV2 extends StatelessWidget {
               vertical: size.height * 0.06,
               horizontal: size.width * 0.04,
             ),
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
                 color: greyColor, borderRadius: BorderRadius.circular(30)),
             child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -67,12 +67,13 @@ class RoundedProfileButtonV2 extends StatelessWidget {
               vertical: size.height * 0.04,
               horizontal: size.width * 0.04,
             ),
-            padding: EdgeInsets.symmetric(horizontal: 6),
+            padding: EdgeInsets.symmetric(horizontal: 4),
             decoration: BoxDecoration(
                 color: greyColor, borderRadius: BorderRadius.circular(30)),
             child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
               CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/profile.png")),
+                backgroundImage: image,
+              ),
               SizedBox(width: size.width * 0.02),
               GestureDetector(
                 onTap: () {},
@@ -80,13 +81,13 @@ class RoundedProfileButtonV2 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Hi, Hafid",
+                    Text(name,
                         style: TextStyle(
                           color: blackColor,
                           fontFamily: "Poppins-Medium",
                           fontSize: 16,
                         )),
-                    Text("Siswa, XII RPL 3",
+                    Text(status,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           color: grey2Color,

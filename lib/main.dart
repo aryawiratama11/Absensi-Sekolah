@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:absensi_sekolah/screens/intro.dart';
 
-// void main() {
-//   runApp(DevicePreview(
-//     builder: (context) => MyApp(),
-//   ));
-// }
-
 void main() {
-  runApp(MyApp());
+  runApp(DevicePreview(
+    builder: (context) => MyApp(),
+  ));
 }
+
+// void main() {
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

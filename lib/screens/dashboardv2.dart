@@ -101,7 +101,6 @@ class SelectionContainer extends StatelessWidget {
                   height: size.height * 0.07,
                   margin: EdgeInsets.symmetric(
                     vertical: size.height * 0.02,
-                    horizontal: size.width * 0.01,
                   ),
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   decoration: BoxDecoration(
@@ -126,7 +125,7 @@ class SelectionContainer extends StatelessWidget {
                             Material(
                               child: Flexible(
                                 child: Container(
-                                  width: size.width * 0.55,
+                                  width: size.width * 0.45,
                                   color: greyColor,
                                   child: Column(
                                     crossAxisAlignment:
@@ -223,6 +222,82 @@ class SelectionContainer extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                Container(
+                  width: size.width * 0.9,
+                  height: size.height * 0.06,
+                  margin: EdgeInsets.symmetric(
+                    vertical: size.height * 0.02,
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: greyColor,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            ClipOval(
+                                child: SizedBox(
+                              width: 40,
+                              height: 40,
+                              child: Icon(
+                                Icons.file_present,
+                                color: primaryColor,
+                                size: 28,
+                              ),
+                            )),
+                            Material(
+                              child: Flexible(
+                                child: Container(
+                                  width: size.width * 0.45,
+                                  color: greyColor,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text("Pengumuman rapot2",
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            color: blackColor,
+                                            fontFamily: "Poppins-Medium",
+                                            fontSize: 12,
+                                          )),
+                                      Text("19 Okt 2020",
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            color: grey2Color,
+                                            fontFamily: "Poppins-Regular",
+                                            fontSize: 10,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        ClipOval(
+                            child: Material(
+                          color: primaryColor, // button color
+                          child: InkWell(
+                            splashColor: darkColor, // inkwell color
+                            child: SizedBox(
+                              width: 40,
+                              height: 40,
+                              child: Icon(
+                                Icons.navigate_next,
+                                color: whiteColor,
+                                size: 28,
+                              ),
+                            ),
+                            onTap: () {},
+                          ),
+                        )),
+                      ]),
                 ),
               ])));
         }
