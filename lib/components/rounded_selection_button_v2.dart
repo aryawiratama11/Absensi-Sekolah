@@ -4,12 +4,14 @@ import 'package:absensi_sekolah/utilities/constants.dart';
 class RoundedSelectionButtonV2 extends StatelessWidget {
   final String desc;
   final String title;
+  final IconData icon;
   final Function onTap;
   final double allSize;
 
   RoundedSelectionButtonV2({
     Key key,
     this.desc,
+    this.icon,
     this.title,
     this.onTap,
     this.allSize,
@@ -40,7 +42,7 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
               width: newIconButtonSize,
               height: newIconButtonSize,
               child: Icon(
-                Icons.file_present,
+                icon,
                 color: primaryColor,
                 size: newIconSize,
               ),

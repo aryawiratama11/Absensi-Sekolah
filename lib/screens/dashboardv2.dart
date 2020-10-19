@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/components/list_container.dart';
 import 'package:absensi_sekolah/components/rounded_profile_button_v2.dart';
 import 'package:absensi_sekolah/components/rounded_filter_button_v2.dart';
 import 'package:absensi_sekolah/components/rounded_selection_button_v2.dart';
@@ -34,90 +35,20 @@ class _Dashboardv2State extends State<Dashboardv2> {
             status: "Status",
             image: AssetImage("assets/images/ig.png"),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxHeight > 600) {
-                return Container(
-                    width: double.infinity,
-                    height: size.height * 0.5,
-                    padding: EdgeInsets.only(left: 20, right: 20, top: 20),
-                    decoration: BoxDecoration(
-                        color: whiteColor,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30))),
-                    child: SingleChildScrollView(
-                        child: Column(children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Pengumuman",
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: blackColor,
-                              fontFamily: "Poppins-Medium",
-                            ),
-                          ),
-                          RoundedFilterButtonV2(
-                            allSize: 16,
-                            onTap: () {},
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: size.height * 0.015,
-                      ),
-                      RoundedSelectionButtonV2(
-                        title: "Pengumumanaaaaaaaaaaa",
-                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
-                        allSize: 18,
-                        onTap: () {},
-                      ),
-                    ])));
-              } else {
-                return Container(
-                    height: 300,
-                    width: double.infinity,
-                    padding: EdgeInsets.only(left: 15, right: 15, top: 15),
-                    decoration: BoxDecoration(
-                        color: whiteColor,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30))),
-                    child: SingleChildScrollView(
-                        child: Column(children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Pengumuman",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: blackColor,
-                              fontFamily: "Poppins-Medium",
-                            ),
-                          ),
-                          RoundedFilterButtonV2(
-                            allSize: 14,
-                            onTap: () {},
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: size.height * 0.015,
-                      ),
-                      RoundedSelectionButtonV2(
-                        title: "Pengumumanaaaaaaaaaaa",
-                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
-                        allSize: 16,
-                        onTap: () {},
-                      ),
-                    ])));
-              }
-            }),
-          ),
+          ListContainer(
+            allSize: 50,
+            // filterButton: RoundedFilterButtonV2(
+            //   onTap: () {},
+            //   allSize: 16,
+            // ),
+            selectionButton: RoundedSelectionButtonV2(
+              allSize: 18,
+              desc: "Desc",
+              onTap: () {},
+              title: "title",
+              icon: Icons.insert_drive_file,
+            ),
+          )
         ]));
   }
 }
