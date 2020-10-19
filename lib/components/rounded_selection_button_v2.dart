@@ -5,25 +5,23 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
   final String desc;
   final String title;
   final Function onTap;
-  final double iconSize;
-  final double fontSize;
-  final double iconButtonSize;
+  final double allSize;
 
-  RoundedSelectionButtonV2(
-      {Key key,
-      this.desc,
-      this.title,
-      this.onTap,
-      this.iconSize,
-      this.fontSize,
-      this.iconButtonSize})
-      : super(key: key);
+  RoundedSelectionButtonV2({
+    Key key,
+    this.desc,
+    this.title,
+    this.onTap,
+    this.allSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final double newFontSize = fontSize / 1.5;
-    final double newHeightContainer = iconSize * 2 + 10;
+    final double newFontSize = allSize / 1.5;
+    final double newHeightContainer = allSize * 3.2;
+    final double newIconSize = allSize + 6;
+    final double newIconButtonSize = allSize * 2.7;
 
     return Container(
       height: size.height * 0 + newHeightContainer,
@@ -39,12 +37,12 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
           children: [
             ClipOval(
                 child: SizedBox(
-              width: iconButtonSize,
-              height: iconButtonSize,
+              width: newIconButtonSize,
+              height: newIconButtonSize,
               child: Icon(
                 Icons.file_present,
                 color: primaryColor,
-                size: iconSize,
+                size: newIconSize,
               ),
             )),
             Material(
@@ -61,7 +59,7 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
                           style: TextStyle(
                             color: blackColor,
                             fontFamily: "Poppins-Medium",
-                            fontSize: fontSize,
+                            fontSize: allSize,
                           )),
                       Text(desc,
                           overflow: TextOverflow.ellipsis,
@@ -83,12 +81,12 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
           child: InkWell(
             splashColor: darkColor, // inkwell color
             child: SizedBox(
-              width: iconButtonSize,
-              height: iconButtonSize,
+              width: newIconButtonSize,
+              height: newIconButtonSize,
               child: Icon(
                 Icons.navigate_next,
                 color: whiteColor,
-                size: iconSize,
+                size: newIconSize,
               ),
             ),
             onTap: onTap,
