@@ -25,22 +25,23 @@ class _Dashboardv2State extends State<Dashboardv2> {
             child: SvgPicture.asset("assets/images/sun.svg"),
           ),
           Positioned(
-              top: size.height * 0.18,
               left: -2,
+              top: size.height * 0.18,
               child: SvgPicture.asset("assets/images/house.svg")),
           RoundedProfileButtonV2(
-              image: AssetImage("assets/images/ig.png"),
-              name: "Hafid",
-              status: "Status",
-              onTap: () {}),
+            onTap: () {},
+            name: "Hafid",
+            status: "Status",
+            image: AssetImage("assets/images/ig.png"),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxHeight > 600) {
                 return Container(
-                    height: size.height * 0.5,
                     width: double.infinity,
-                    padding: EdgeInsets.all(20),
+                    height: size.height * 0.5,
+                    padding: EdgeInsets.only(left: 20, right: 20, top: 20),
                     decoration: BoxDecoration(
                         color: whiteColor,
                         borderRadius: BorderRadius.only(
@@ -68,6 +69,9 @@ class _Dashboardv2State extends State<Dashboardv2> {
                           )
                         ],
                       ),
+                      SizedBox(
+                        height: size.height * 0.015,
+                      ),
                       RoundedSelectionButtonV2(
                         title: "Pengumumanaaaaaaaaaaa",
                         desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -75,13 +79,53 @@ class _Dashboardv2State extends State<Dashboardv2> {
                         iconButtonSize: 50,
                         iconSize: 24,
                         onTap: () {},
-                      )
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 18,
+                        iconButtonSize: 50,
+                        iconSize: 24,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 18,
+                        iconButtonSize: 50,
+                        iconSize: 24,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 18,
+                        iconButtonSize: 50,
+                        iconSize: 24,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 18,
+                        iconButtonSize: 50,
+                        iconSize: 24,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 18,
+                        iconButtonSize: 50,
+                        iconSize: 24,
+                        onTap: () {},
+                      ),
                     ])));
               } else {
                 return Container(
                     height: 300,
                     width: double.infinity,
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.only(left: 15, right: 15, top: 15),
                     decoration: BoxDecoration(
                         color: whiteColor,
                         borderRadius: BorderRadius.only(
@@ -95,7 +139,7 @@ class _Dashboardv2State extends State<Dashboardv2> {
                           Text(
                             "Pengumuman",
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 18,
                               color: blackColor,
                               fontFamily: "Poppins-Medium",
                             ),
@@ -109,6 +153,9 @@ class _Dashboardv2State extends State<Dashboardv2> {
                           )
                         ],
                       ),
+                      SizedBox(
+                        height: size.height * 0.015,
+                      ),
                       RoundedSelectionButtonV2(
                         title: "Pengumumanaaaaaaaaaaa",
                         desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -116,7 +163,47 @@ class _Dashboardv2State extends State<Dashboardv2> {
                         iconButtonSize: 40,
                         iconSize: 20,
                         onTap: () {},
-                      )
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 16,
+                        iconButtonSize: 40,
+                        iconSize: 20,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 16,
+                        iconButtonSize: 40,
+                        iconSize: 20,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 16,
+                        iconButtonSize: 40,
+                        iconSize: 20,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 16,
+                        iconButtonSize: 40,
+                        iconSize: 20,
+                        onTap: () {},
+                      ),
+                      RoundedSelectionButtonV2(
+                        title: "Pengumumanaaaaaaaaaaa",
+                        desc: "aaaaaaaaaaaaaaaaaaaaaaaaa",
+                        fontSize: 16,
+                        iconButtonSize: 40,
+                        iconSize: 20,
+                        onTap: () {},
+                      ),
                     ])));
               }
             }),

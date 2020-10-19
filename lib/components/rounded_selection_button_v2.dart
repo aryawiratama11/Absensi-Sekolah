@@ -28,7 +28,7 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
     return Container(
       height: size.height * 0 + newHeightContainer,
       margin: EdgeInsets.symmetric(
-        vertical: size.height * 0.02,
+        vertical: size.height * 0.005,
       ),
       padding: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
             Material(
               child: Flexible(
                 child: Container(
-                  width: size.width * 0.40,
+                  width: size.width * 0.48,
                   color: greyColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
