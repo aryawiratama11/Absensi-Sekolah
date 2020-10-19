@@ -75,27 +75,24 @@ class RoundedProfileButtonV2 extends StatelessWidget {
                 backgroundImage: image,
               ),
               SizedBox(width: size.width * 0.02),
-              GestureDetector(
-                onTap: () {},
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(name,
-                        style: TextStyle(
-                          color: blackColor,
-                          fontFamily: "Poppins-Medium",
-                          fontSize: 16,
-                        )),
-                    Text(status,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: grey2Color,
-                          fontFamily: "Poppins-Regular",
-                          fontSize: 10,
-                        )),
-                  ],
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(name,
+                      style: TextStyle(
+                        color: blackColor,
+                        fontFamily: "Poppins-Medium",
+                        fontSize: 16,
+                      )),
+                  Text(status,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: grey2Color,
+                        fontFamily: "Poppins-Regular",
+                        fontSize: 10,
+                      )),
+                ],
               ),
             ]),
           ),
