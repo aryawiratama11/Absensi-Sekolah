@@ -60,9 +60,6 @@ class IntroV2 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
-                    height: size.height * 0.02,
-                  ),
                   RoundedButtonV2(
                     onPress: () {
                       Navigator.pushReplacement(context,
@@ -71,9 +68,6 @@ class IntroV2 extends StatelessWidget {
                       }));
                     },
                     text: "Lanjut",
-                  ),
-                  SizedBox(
-                    height: size.height * 0.02,
                   ),
                   Column(
                     children: [
@@ -164,9 +158,6 @@ class IntroV2 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
-                    height: size.height * 0.01,
-                  ),
                   RoundedButtonV2(
                     onPress: () {
                       Navigator.pushReplacement(context,
@@ -175,9 +166,6 @@ class IntroV2 extends StatelessWidget {
                       }));
                     },
                     text: "Lanjut",
-                  ),
-                  SizedBox(
-                    height: size.height * 0.01,
                   ),
                   Column(
                     children: [

@@ -14,7 +14,7 @@ class ListContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final double newHeightSize = allSize * 8;
-    final double newPaddingandFontSize = allSize / 2.5;
+    final double newPadding = allSize / 2.5;
 
     return Align(
         alignment: Alignment.bottomCenter,
@@ -22,9 +22,7 @@ class ListContainer extends StatelessWidget {
             width: double.infinity,
             height: size.height * 0 + newHeightSize,
             padding: EdgeInsets.only(
-                left: newPaddingandFontSize,
-                right: newPaddingandFontSize,
-                top: newPaddingandFontSize),
+                left: newPadding, right: newPadding, top: newPadding),
             decoration: BoxDecoration(
                 color: whiteColor,
                 borderRadius: BorderRadius.only(
@@ -40,7 +38,7 @@ class ListContainer extends StatelessWidget {
                     style: TextStyle(
                       color: blackColor,
                       fontFamily: "Poppins-Medium",
-                      fontSize: newPaddingandFontSize,
+                      fontSize: 20,
                     ),
                   ),
                   filterButton == null ? Container() : filterButton,
