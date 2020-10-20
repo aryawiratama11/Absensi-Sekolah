@@ -1,6 +1,8 @@
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
 import 'package:absensi_sekolah/screens/introv2.dart';
 import 'package:absensi_sekolah/screens/school_listv2.dart';
+import 'package:absensi_sekolah/screens/signin.dart';
+import 'package:absensi_sekolah/screens/signinv2.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:absensi_sekolah/screens/intro.dart';

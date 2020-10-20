@@ -16,7 +16,7 @@ class OrDivider extends StatelessWidget {
             child: Text(
               "Social Media",
               style: TextStyle(
-                color: primaryColor,
+                color: blackColor,
                 fontFamily: "Poppins-Regular",
               ),
             ),

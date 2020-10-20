@@ -22,7 +22,7 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     final double newFontSize = allSize / 1.5;
     final double newHeightContainer = allSize * 3.2;
-    final double newIconSize = allSize + 6;
+    final double newIconSize = allSize * 1.6;
     final double newIconButtonSize = allSize * 2.7;
 
     return Container(

@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:absensi_sekolah/screens/signinv2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -67,7 +68,7 @@ class _SchoolListV2State extends State<SchoolListV2> {
               onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) {
-                  return Dashboardv2();
+                  return Signinv2();
                 }));
               },
               title: "title",
