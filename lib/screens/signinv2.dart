@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:absensi_sekolah/screens/school_list_example.dart';
 import 'package:absensi_sekolah/screens/school_listv2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -56,7 +57,7 @@ class _Signinv2State extends State<Signinv2> {
               onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) {
-                  return SchoolListV2();
+                  return SchoolListExample();
                 }));
               },
             ),

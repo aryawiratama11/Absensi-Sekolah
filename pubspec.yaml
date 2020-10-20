@@ -29,6 +29,7 @@ dependencies:
   flutter_svg: ^0.19.0
   device_preview: ^0.4.8
   cupertino_icons: ^1.0.0
+  solid_bottom_sheet: ^0.1.9
 
 dev_dependencies:
   flutter_test:
