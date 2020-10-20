@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 
-class RoundedButton extends StatelessWidget {
+class RoundedButtonV2 extends StatelessWidget {
   final String text;
-  final Function press;
+  final Function onPress;
 
-  const RoundedButton({
+  const RoundedButtonV2({
     Key key,
     this.text,
-    this.press,
+    this.onPress,
   }) : super(key: key);
 
   @override
@@ -16,17 +16,17 @@ class RoundedButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width * 0.9,
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: FlatButton(
-            onPressed: press,
+            onPressed: onPress,
             color: primaryColor,
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            padding: EdgeInsets.symmetric(vertical: 10),
             child: Text(
               text,
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 22,
                 color: whiteColor,
                 fontFamily: "Poppins-SemiBold",
               ),

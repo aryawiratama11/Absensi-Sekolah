@@ -4,7 +4,7 @@ import 'package:absensi_sekolah/ui/base_widget.dart';
 import 'package:absensi_sekolah/utilities/layout.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/school_list.dart';
-import 'package:absensi_sekolah/components/rounded_button.dart';
+import 'package:absensi_sekolah/components/rounded_button_v2.dart';
 
 class Intro extends StatelessWidget {
   @override
@@ -56,8 +56,8 @@ class Intro extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              RoundedButton(
-                press: () {
+              RoundedButtonV2(
+                onPress: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
                     return SchoolList();

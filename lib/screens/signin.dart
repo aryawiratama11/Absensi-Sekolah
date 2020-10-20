@@ -6,7 +6,7 @@ import 'package:absensi_sekolah/screens/school_list.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/components/or_divider.dart';
 import 'package:absensi_sekolah/components/social_icon.dart';
-import 'package:absensi_sekolah/components/rounded_button.dart';
+import 'package:absensi_sekolah/components/rounded_button_v2.dart';
 import 'package:absensi_sekolah/components/rounded_input_field.dart';
 import 'package:absensi_sekolah/components/rounded_password_field.dart';
 import 'package:absensi_sekolah/components/rounded_navigation_button.dart';
@@ -72,8 +72,8 @@ class _SigninState extends State<Signin> {
                 onChanged: (value) {},
               ),
               SizedBox(height: SizeConfig.blockVertical * 2),
-              RoundedButton(
-                press: () {
+              RoundedButtonV2(
+                onPress: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
                     return Dashboard();

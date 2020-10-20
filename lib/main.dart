@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:absensi_sekolah/screens/introv2.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:absensi_sekolah/screens/intro.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           textTheme:
               Theme.of(context).textTheme.apply(displayColor: Colors.blue)),
-      home: Dashboardv2(),
+      home: IntroV2(),
     );
   }
 }
