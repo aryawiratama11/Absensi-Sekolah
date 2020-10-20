@@ -34,6 +34,7 @@ class _Dashboardv2State extends State<Dashboardv2> {
             image: AssetImage("assets/images/ig.png"),
           ),
           ListContainer(
+            title: "Pengumuman",
             allSize: 50,
             // filterButton: RoundedFilterButtonV2(
             //   onTap: () {},

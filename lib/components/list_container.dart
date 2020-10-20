@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 
 class ListContainer extends StatelessWidget {
+  final String title;
   final double allSize;
   final Widget filterButton;
   final Widget selectionButton;
 
   ListContainer(
-      {Key key, this.allSize, this.filterButton, this.selectionButton})
+      {Key key,
+      this.title,
+      this.allSize,
+      this.filterButton,
+      this.selectionButton})
       : super(key: key);
 
   @override
@@ -34,7 +39,7 @@ class ListContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Pengumuman",
+                    title,
                     style: TextStyle(
                       color: blackColor,
                       fontFamily: "Poppins-Medium",

@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/screens/dashboardv2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -54,6 +55,7 @@ class _SchoolListV2State extends State<SchoolListV2> {
             ),
           ),
           ListContainer(
+            title: "Daftar sekolah",
             allSize: 70,
             filterButton: RoundedFilterButtonV2(
               onTap: () {},
@@ -62,7 +64,12 @@ class _SchoolListV2State extends State<SchoolListV2> {
             selectionButton: RoundedSelectionButtonV2(
               allSize: 18,
               desc: "Desc",
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return Dashboardv2();
+                }));
+              },
               title: "title",
               icon: Icons.insert_drive_file,
             ),

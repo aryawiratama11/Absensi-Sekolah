@@ -28,7 +28,7 @@ class RoundedProfileButtonV2 extends StatelessWidget {
             ),
             padding: EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
-                color: greyColor, borderRadius: BorderRadius.circular(30)),
+                color: whiteColor, borderRadius: BorderRadius.circular(30)),
             child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
               CircleAvatar(backgroundImage: image),
               SizedBox(width: size.width * 0.02),
@@ -69,7 +69,7 @@ class RoundedProfileButtonV2 extends StatelessWidget {
             ),
             padding: EdgeInsets.symmetric(horizontal: 4),
             decoration: BoxDecoration(
-                color: greyColor, borderRadius: BorderRadius.circular(30)),
+                color: whiteColor, borderRadius: BorderRadius.circular(30)),
             child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
               CircleAvatar(
                 backgroundImage: image,

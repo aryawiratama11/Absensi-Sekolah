@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/screens/school_listv2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -60,14 +61,20 @@ class IntroV2 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
                   RoundedButtonV2(
                     onPress: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return SchoolList();
+                        return SchoolListV2();
                       }));
                     },
                     text: "Lanjut",
+                  ),
+                  SizedBox(
+                    height: size.height * 0.01,
                   ),
                   Column(
                     children: [
