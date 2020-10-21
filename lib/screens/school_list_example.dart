@@ -1,12 +1,9 @@
-import 'package:absensi_sekolah/screens/signinv2.dart';
 import 'package:flutter/material.dart';
-import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
-
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:absensi_sekolah/screens/signinv2.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
-import 'package:absensi_sekolah/components/list_container.dart';
+import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 import 'package:absensi_sekolah/components/rounded_search_field_v2.dart';
-import 'package:absensi_sekolah/components/rounded_filter_button_v2.dart';
 import 'package:absensi_sekolah/components/rounded_selection_button_v2.dart';
 
 class SchoolListExample extends StatefulWidget {
@@ -85,11 +82,11 @@ class _SchoolListExampleState extends State<SchoolListExample> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Pengumuman",
+                      "Daftar sekolah",
                       style: TextStyle(
+                        fontSize: 20,
                         color: blackColor,
                         fontFamily: "Poppins-Medium",
-                        fontSize: 20,
                       ),
                     ),
                   ],
@@ -112,51 +109,50 @@ class _SchoolListExampleState extends State<SchoolListExample> {
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(
                   allSize: 18,
                   desc: "desc",
-                  icon: Icons.school,
                   onTap: () {},
                   title: "title",
+                  icon: Icons.school,
                 ),
               ])))),
     );

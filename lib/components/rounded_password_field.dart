@@ -28,7 +28,7 @@ class RoundedPasswordField extends StatelessWidget {
               color: primaryColor,
             ),
             fillColor: primaryColor,
-            hintText: "Your Password",
+            hintText: "Masukkan password kamu!",
             hintStyle: TextStyle(
                 color: lightColor, fontFamily: "Poppins-Regular", fontSize: 14),
             border: InputBorder.none),

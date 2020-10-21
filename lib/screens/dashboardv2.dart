@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/components/donut_pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -27,11 +28,48 @@ class _Dashboardv2State extends State<Dashboardv2> {
               left: -2,
               top: size.height * 0.18,
               child: SvgPicture.asset("assets/images/house.svg")),
-          RoundedProfileButtonV2(
-            onTap: () {},
-            name: "Hafid",
-            status: "Status",
-            image: AssetImage("assets/images/ig.png"),
+          Column(
+            children: [
+              RoundedProfileButtonV2(
+                onTap: () {},
+                name: "Hafid",
+                status: "Status",
+                image: AssetImage("assets/images/ig.png"),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: whiteColor, borderRadius: BorderRadius.circular(30)),
+                width: 350,
+                height: 180,
+                child: Row(
+                  children: [
+                    Container(
+                        width: 180,
+                        height: 180,
+                        child: DonutPieChart.withSampleData()),
+                    Container(
+                        padding: EdgeInsets.symmetric(vertical: 20),
+                        child: Column(children: [
+                          Text("Keterangan",
+                              style: TextStyle(
+                                  fontFamily: "Poppins-Medium", fontSize: 14)),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.circle,
+                                color: Colors.blue,
+                              ),
+                              Text("Masuk",
+                                  style: TextStyle(
+                                      fontFamily: "Poppins-Medium",
+                                      fontSize: 12))
+                            ],
+                          )
+                        ])),
+                  ],
+                ),
+              ),
+            ],
           ),
           ListContainer(
             title: "Pengumuman",
