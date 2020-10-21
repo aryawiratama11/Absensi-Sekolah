@@ -22,14 +22,14 @@ class DonutPieChart extends StatelessWidget {
         animationDuration: Duration(seconds: 1),
         // Configure the width of the pie slices to 60px. The remaining space in
         // the chart will be left as a hole in the center.
-        defaultRenderer: new charts.ArcRendererConfig(arcWidth: 30));
+        defaultRenderer: new charts.ArcRendererConfig(arcWidth: 25));
   }
 
   /// Create one series with sample hard coded data.
   static List<charts.Series<Statistic, int>> _createSampleData() {
     final data = [
-      new Statistic(0, 25, Colors.redAccent),
-      new Statistic(1, 75, Colors.yellowAccent),
+      new Statistic(0, 25, Colors.red),
+      new Statistic(1, 75, Colors.yellow),
       new Statistic(2, 150, Colors.blue)
     ];
 

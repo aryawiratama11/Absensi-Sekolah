@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/components/donut_pie_chart.dart';
+import 'package:absensi_sekolah/components/rounded_button_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -49,23 +50,89 @@ class _Dashboardv2State extends State<Dashboardv2> {
                         child: DonutPieChart.withSampleData()),
                     Container(
                         padding: EdgeInsets.symmetric(vertical: 20),
-                        child: Column(children: [
-                          Text("Keterangan",
-                              style: TextStyle(
-                                  fontFamily: "Poppins-Medium", fontSize: 14)),
-                          Row(
+                        // color: Colors.red,
+                        width: 160,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.circle,
-                                color: Colors.blue,
-                              ),
-                              Text("Masuk",
+                              Text("Keterangan",
                                   style: TextStyle(
                                       fontFamily: "Poppins-Medium",
-                                      fontSize: 12))
-                            ],
-                          )
-                        ])),
+                                      fontSize: 14)),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Icon(
+                                    Icons.circle,
+                                    color: Colors.blue,
+                                  ),
+                                  Text("Masuk",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins-Medium",
+                                          fontSize: 12)),
+                                  Icon(
+                                    Icons.circle,
+                                    color: Colors.blue,
+                                  ),
+                                  Text("Masuk",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins-Medium",
+                                          fontSize: 12)),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Icon(
+                                    Icons.circle,
+                                    color: Colors.blue,
+                                  ),
+                                  Text("Masuk",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins-Medium",
+                                          fontSize: 12)),
+                                  Icon(
+                                    Icons.circle,
+                                    color: Colors.blue,
+                                  ),
+                                  Text("Masuk",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins-Medium",
+                                          fontSize: 12)),
+                                ],
+                              ),
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  height: 40,
+                                  width: 150.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF2196F3),
+                                    borderRadius: BorderRadius.circular(30.0),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text(
+                                        "Detail",
+                                        style: TextStyle(
+                                          color: whiteColor,
+                                          fontFamily: "Poppins-SemiBold",
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.navigate_next,
+                                        color: whiteColor,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ])),
                   ],
                 ),
               ),
