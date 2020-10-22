@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           textTheme:
               Theme.of(context).textTheme.apply(displayColor: Colors.blue)),
-      home: Dashboardv2(),
+      home: IntroV2(),
     );
   }
 }

@@ -37,9 +37,25 @@ class _Dashboardv2State extends State<Dashboardv2> {
                 status: "Status",
                 image: AssetImage("assets/images/ig.png"),
               ),
+              Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      width: 350,
+                      child: Text("Absensi saya",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: blackColor,
+                            fontFamily: "Poppins-SemiBold",
+                          )))),
               Container(
-                decoration: BoxDecoration(
-                    color: whiteColor, borderRadius: BorderRadius.circular(30)),
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: lightColor,
+                    offset: Offset(0, 10),
+                    blurRadius: 30,
+                  )
+                ], color: whiteColor, borderRadius: BorderRadius.circular(30)),
                 width: 350,
                 height: 180,
                 child: Row(
@@ -74,9 +90,9 @@ class _Dashboardv2State extends State<Dashboardv2> {
                                           fontSize: 12)),
                                   Icon(
                                     Icons.circle,
-                                    color: Colors.blue,
+                                    color: Colors.green,
                                   ),
-                                  Text("Masuk",
+                                  Text("Telat",
                                       style: TextStyle(
                                           fontFamily: "Poppins-Medium",
                                           fontSize: 12)),
@@ -88,47 +104,50 @@ class _Dashboardv2State extends State<Dashboardv2> {
                                 children: [
                                   Icon(
                                     Icons.circle,
-                                    color: Colors.blue,
+                                    color: Colors.yellow,
                                   ),
-                                  Text("Masuk",
+                                  Text("Izin",
                                       style: TextStyle(
                                           fontFamily: "Poppins-Medium",
                                           fontSize: 12)),
                                   Icon(
                                     Icons.circle,
-                                    color: Colors.blue,
+                                    color: Colors.red,
                                   ),
-                                  Text("Masuk",
+                                  Text("Tidak masuk",
                                       style: TextStyle(
                                           fontFamily: "Poppins-Medium",
                                           fontSize: 12)),
                                 ],
                               ),
-                              GestureDetector(
-                                onTap: () {},
-                                child: Container(
-                                  height: 40,
-                                  width: 150.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFF2196F3),
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        "Detail",
-                                        style: TextStyle(
-                                          color: whiteColor,
-                                          fontFamily: "Poppins-SemiBold",
-                                          fontSize: 16,
+                              Material(
+                                color: primaryColor,
+                                borderRadius: BorderRadius.circular(30),
+                                child: InkWell(
+                                  onTap: () {},
+                                  splashColor: darkColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                  child: Container(
+                                    height: size.height * 0.05,
+                                    width: size.width * 0.4,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Detail",
+                                          style: TextStyle(
+                                            color: whiteColor,
+                                            fontFamily: "Poppins-SemiBold",
+                                            fontSize: 16,
+                                          ),
                                         ),
-                                      ),
-                                      Icon(
-                                        Icons.navigate_next,
-                                        color: whiteColor,
-                                      )
-                                    ],
+                                        Icon(
+                                          Icons.navigate_next,
+                                          color: whiteColor,
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -138,20 +157,78 @@ class _Dashboardv2State extends State<Dashboardv2> {
               ),
             ],
           ),
-          ListContainer(
-            title: "Pengumuman",
-            allSize: 50,
-            // filterButton: RoundedFilterButtonV2(
-            //   onTap: () {},
-            //   allSize: 16,
-            // ),
-            selectionButton: RoundedSelectionButtonV2(
-              allSize: 18,
-              desc: "Desc",
-              onTap: () {},
-              title: "title",
-              icon: Icons.insert_drive_file,
-            ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+                width: double.infinity,
+                height: size.height * 0.5,
+                padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+                decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30))),
+                child: SingleChildScrollView(
+                    child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Pengumuman",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: blackColor,
+                          fontFamily: "Poppins-Medium",
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: size.height * 0.015,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                  RoundedSelectionButtonV2(
+                    allSize: 18,
+                    desc: "desc",
+                    onTap: () {},
+                    title: "title",
+                    icon: Icons.insert_drive_file,
+                  ),
+                ]))),
           )
         ]));
   }

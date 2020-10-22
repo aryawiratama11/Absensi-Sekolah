@@ -24,32 +24,33 @@ class RoundedSearchFieldV2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
+      decoration: BoxDecoration(
+          color: conColor,
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color: lightColor,
+              offset: Offset(0, 10),
+              blurRadius: 20,
+            )
+          ]),
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      child: Material(
-        elevation: 5,
-        color: conColor,
-        borderRadius: BorderRadius.circular(30),
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-          width: size.width * 0.9,
-          child: TextField(
-            cursorColor: color,
-            onChanged: onChanged,
-            style: TextStyle(color: blackColor),
-            decoration: InputDecoration(
-                icon: Icon(
-                  icon,
-                  color: color,
-                ),
-                fillColor: color,
-                hintText: hintText,
-                border: InputBorder.none,
-                hintStyle: TextStyle(
-                    color: hintColor,
-                    fontFamily: "Poppins-Regular",
-                    fontSize: 14)),
-          ),
-        ),
+      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+      width: size.width * 0.9,
+      child: TextField(
+        cursorColor: color,
+        onChanged: onChanged,
+        style: TextStyle(color: blackColor),
+        decoration: InputDecoration(
+            icon: Icon(
+              icon,
+              color: color,
+            ),
+            fillColor: color,
+            hintText: hintText,
+            border: InputBorder.none,
+            hintStyle: TextStyle(
+                color: hintColor, fontFamily: "Poppins-Regular", fontSize: 14)),
       ),
     );
   }

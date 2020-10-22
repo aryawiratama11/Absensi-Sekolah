@@ -28,9 +28,10 @@ class DonutPieChart extends StatelessWidget {
   /// Create one series with sample hard coded data.
   static List<charts.Series<Statistic, int>> _createSampleData() {
     final data = [
-      new Statistic(0, 25, Colors.red),
-      new Statistic(1, 75, Colors.yellow),
-      new Statistic(2, 150, Colors.blue)
+      new Statistic(0, 10, Colors.red),
+      new Statistic(1, 10, Colors.yellow),
+      new Statistic(2, 150, Colors.blue),
+      new Statistic(3, 25, Colors.green)
     ];
 
     return [
