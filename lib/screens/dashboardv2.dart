@@ -1,5 +1,6 @@
 import 'package:absensi_sekolah/components/donut_pie_chart.dart';
 import 'package:absensi_sekolah/components/rounded_button_v2.dart';
+import 'package:absensi_sekolah/screens/absent_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -124,7 +125,12 @@ class _Dashboardv2State extends State<Dashboardv2> {
                                 color: primaryColor,
                                 borderRadius: BorderRadius.circular(30),
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return AbsentDetails();
+                                    }));
+                                  },
                                   splashColor: darkColor,
                                   borderRadius: BorderRadius.circular(30),
                                   child: Container(
