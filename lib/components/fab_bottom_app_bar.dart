@@ -1,14 +1,13 @@
-import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
-class FABBottomAppBarItem {
+class FabBottomAppBarItem {
   IconData iconData;
   String text;
-  FABBottomAppBarItem({this.iconData, this.text});
+  FabBottomAppBarItem({this.iconData, this.text});
 }
 
-class FABBottomAppBar extends StatefulWidget {
-  FABBottomAppBar({
+class FabBottomAppBar extends StatefulWidget {
+  FabBottomAppBar({
     this.items,
     this.centerItemText,
     this.height: 60.0,
@@ -21,7 +20,7 @@ class FABBottomAppBar extends StatefulWidget {
   }) {
     assert(this.items.length == 2 || this.items.length == 4);
   }
-  final List<FABBottomAppBarItem> items;
+  final List<FabBottomAppBarItem> items;
   final String centerItemText;
   final double height;
   final double iconSize;
@@ -32,10 +31,10 @@ class FABBottomAppBar extends StatefulWidget {
   final ValueChanged<int> onTabSelected;
 
   @override
-  State<StatefulWidget> createState() => FABBottomAppBarState();
+  State<StatefulWidget> createState() => FabBottomAppBarState();
 }
 
-class FABBottomAppBarState extends State<FABBottomAppBar> {
+class FabBottomAppBarState extends State<FabBottomAppBar> {
   int _selectedIndex = 0;
 
   _updateIndex(int index) {
@@ -87,7 +86,7 @@ class FABBottomAppBarState extends State<FABBottomAppBar> {
   }
 
   Widget _buildTabItem({
-    FABBottomAppBarItem item,
+    FabBottomAppBarItem item,
     int index,
     ValueChanged<int> onPressed,
   }) {

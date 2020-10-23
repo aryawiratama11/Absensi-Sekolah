@@ -1,4 +1,5 @@
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:absensi_sekolah/screens/master.dart';
 import 'package:absensi_sekolah/screens/school_list_example.dart';
 import 'package:absensi_sekolah/screens/school_listv2.dart';
 import 'package:flutter/material.dart';
@@ -96,7 +97,7 @@ class _Signinv2State extends State<Signinv2> {
                 onPress: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return Dashboardv2();
+                    return Master();
                   }));
                 },
                 text: "Masuk",

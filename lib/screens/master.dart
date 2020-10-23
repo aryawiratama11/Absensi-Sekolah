@@ -1,8 +1,8 @@
-import 'package:absensi_sekolah/screens/FABBottomAppBar.dart';
-import 'package:absensi_sekolah/screens/absent_details.dart';
-import 'package:absensi_sekolah/screens/dashboardv2.dart';
-import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:absensi_sekolah/utilities/constants.dart';
+import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
+import 'package:absensi_sekolah/components/fab_bottom_app_bar.dart';
 
 class Master extends StatefulWidget {
   @override
@@ -28,16 +28,21 @@ class _MasterState extends State<Master> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-        elevation: 2.0,
-      ),
-      bottomNavigationBar: FABBottomAppBar(
+          onPressed: () async {
+            await scanner.scan();
+            setState(() {});
+          },
+          tooltip: 'Increment',
+          child: Icon(Icons.add),
+          elevation: 2.0,
+          splashColor: darkColor),
+      bottomNavigationBar: FabBottomAppBar(
         onTabSelected: _selectedTab,
         items: [
-          FABBottomAppBarItem(iconData: Icons.menu, text: 'This'),
-          FABBottomAppBarItem(iconData: Icons.layers, text: 'Is'),
+          FabBottomAppBarItem(iconData: Icons.dashboard, text: 'Dashboard'),
+          FabBottomAppBarItem(
+              iconData: Icons.supervised_user_circle_rounded,
+              text: "Daftar guru"),
         ],
         notchedShape: CircularNotchedRectangle(),
         color: Colors.blueGrey,

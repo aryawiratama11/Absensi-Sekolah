@@ -1,7 +1,7 @@
-import 'package:absensi_sekolah/screens/come_in.dart';
-import 'package:absensi_sekolah/screens/dashboardv2.dart';
-import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:absensi_sekolah/screens/master.dart';
+import 'package:absensi_sekolah/screens/come_in.dart';
+import 'package:absensi_sekolah/utilities/constants.dart';
 
 class AbsentDetails extends StatefulWidget {
   @override
@@ -138,7 +138,7 @@ class _AbsentDetailsState extends State<AbsentDetails>
               onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) {
-                  return Dashboardv2();
+                  return Master();
                 }));
               },
             ),
