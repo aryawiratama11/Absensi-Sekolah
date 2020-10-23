@@ -167,8 +167,8 @@ class _Dashboardv2State extends State<Dashboardv2> {
             alignment: Alignment.bottomCenter,
             child: Container(
                 width: double.infinity,
-                height: size.height * 0.5,
-                padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+                height: size.height * 0.45,
+                padding: EdgeInsets.only(left: 20, right: 20, top: 30),
                 decoration: BoxDecoration(
                     color: whiteColor,
                     borderRadius: BorderRadius.only(

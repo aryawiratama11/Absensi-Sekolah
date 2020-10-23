@@ -111,12 +111,6 @@ class _SchoolListExampleState extends State<SchoolListExample> {
                   desc: "desc",
                   onTap: () {},
                   title: "title",
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
                   icon: Icons.school,
                 ),
                 RoundedSelectionButtonV2(

@@ -48,30 +48,28 @@ class RoundedSelectionButtonV2 extends StatelessWidget {
               ),
             )),
             Material(
-              child: Flexible(
-                child: Container(
-                  width: size.width * 0.48,
-                  color: greyColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(title,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: blackColor,
-                            fontFamily: "Poppins-Medium",
-                            fontSize: allSize,
-                          )),
-                      Text(desc,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: grey2Color,
-                            fontFamily: "Poppins-Regular",
-                            fontSize: newFontSize,
-                          )),
-                    ],
-                  ),
+              child: Container(
+                width: size.width * 0.48,
+                color: greyColor,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(title,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: blackColor,
+                          fontFamily: "Poppins-Medium",
+                          fontSize: allSize,
+                        )),
+                    Text(desc,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: grey2Color,
+                          fontFamily: "Poppins-Regular",
+                          fontSize: newFontSize,
+                        )),
+                  ],
                 ),
               ),
             ),
