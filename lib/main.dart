@@ -3,6 +3,7 @@ import 'package:absensi_sekolah/screens/chart.dart';
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
 import 'package:absensi_sekolah/screens/introv2.dart';
 import 'package:absensi_sekolah/screens/master.dart';
+import 'package:absensi_sekolah/screens/profile_student.dart';
 import 'package:absensi_sekolah/screens/school_list_example.dart';
 import 'package:absensi_sekolah/screens/school_listv2.dart';
 import 'package:absensi_sekolah/screens/signin.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           textTheme:
               Theme.of(context).textTheme.apply(displayColor: Colors.blue)),
-      home: Splash(),
+      home: ProfileStudent(),
     );
   }
 }

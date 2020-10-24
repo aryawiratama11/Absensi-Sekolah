@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/screens/profile_student.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
@@ -30,12 +31,19 @@ class _Dashboardv2State extends State<Dashboardv2> {
               child: SvgPicture.asset("assets/images/house.svg")),
           Column(
             children: [
+              SizedBox(height: size.height * 0.04),
               RoundedProfileButtonV2(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ProfileStudent();
+                  }));
+                },
+                conColor: whiteColor,
                 name: "Hafid",
                 status: "Status",
                 image: AssetImage("assets/images/ig.png"),
               ),
+              SizedBox(height: size.height * 0.02),
               Align(
                   alignment: Alignment.center,
                   child: Container(
@@ -165,7 +173,7 @@ class _Dashboardv2State extends State<Dashboardv2> {
             alignment: Alignment.bottomCenter,
             child: Container(
                 width: double.infinity,
-                height: size.height * 0.45,
+                height: size.height * 0.5,
                 padding: EdgeInsets.only(left: 20, right: 20, top: 30),
                 decoration: BoxDecoration(
                     color: whiteColor,

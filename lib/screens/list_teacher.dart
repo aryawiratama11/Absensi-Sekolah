@@ -48,7 +48,7 @@ class _ListTeacherState extends State<ListTeacher> {
                   conColor: whiteColor,
                   hintColor: grey4Color,
                   onChanged: (value) {},
-                  hintText: "Masukkan nama sekolah!",
+                  hintText: "Masukkan nama guru!",
                 ),
               ],
             ),
