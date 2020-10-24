@@ -25,7 +25,7 @@ class _ComeInState extends State<ComeIn> {
             children: [
               Container(
                   child: Row(children: [
-                Text("Telat ",
+                Text("Masuk ",
                     style: TextStyle(
                       fontSize: 18,
                       color: blackColor,

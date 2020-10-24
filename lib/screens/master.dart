@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/screens/list_teacher.dart';
 import 'package:flutter/material.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
@@ -20,7 +21,7 @@ class _MasterState extends State<Master> {
 
   final List<Widget> _widgetOptions = <Widget>[
     Dashboardv2(),
-    Text("daftar guru"),
+    ListTeacher(),
   ];
 
   @override
