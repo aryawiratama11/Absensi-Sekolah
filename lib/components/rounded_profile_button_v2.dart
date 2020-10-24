@@ -22,7 +22,7 @@ class RoundedProfileButtonV2 extends StatelessWidget {
         width: size.width * 0.9,
         height: size.height * 0.07,
         margin: EdgeInsets.symmetric(
-          vertical: 10,
+          vertical: 5,
         ),
         padding: EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(

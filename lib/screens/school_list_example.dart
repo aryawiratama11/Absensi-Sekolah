@@ -95,8 +95,8 @@ class _SchoolListExampleState extends State<SchoolListExample> {
                   height: size.height * 0.015,
                 ),
                 RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
+                  allSize: 17,
+                  desc: "Kec. Kepanjen, Malang,",
                   icon: Icons.school,
                   onTap: () {
                     Navigator.pushReplacement(context,
@@ -104,48 +104,13 @@ class _SchoolListExampleState extends State<SchoolListExample> {
                       return Signinv2();
                     }));
                   },
-                  title: "title",
+                  title: "SMKN 1 Kepanjen",
                 ),
                 RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
+                  allSize: 17,
+                  desc: "Kec. Kepanjen, Malang,",
                   onTap: () {},
-                  title: "title",
-                  icon: Icons.school,
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
-                  icon: Icons.school,
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
-                  icon: Icons.school,
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
-                  icon: Icons.school,
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
-                  icon: Icons.school,
-                ),
-                RoundedSelectionButtonV2(
-                  allSize: 18,
-                  desc: "desc",
-                  onTap: () {},
-                  title: "title",
+                  title: "SMAN 1 Kepanjen",
                   icon: Icons.school,
                 ),
               ])))),

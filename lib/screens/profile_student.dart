@@ -1,6 +1,7 @@
 import 'package:absensi_sekolah/components/rounded_profile_button_v2.dart';
 import 'package:absensi_sekolah/components/rounded_selection_button_v2.dart';
 import 'package:absensi_sekolah/screens/dashboardv2.dart';
+import 'package:absensi_sekolah/screens/master.dart';
 import 'package:absensi_sekolah/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class _ProfileStudentState extends State<ProfileStudent> {
                 onTap: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return Dashboardv2();
+                    return Master();
                   }));
                 },
               ),
@@ -122,20 +123,4 @@ class _ProfileStudentState extends State<ProfileStudent> {
           ],
         ));
   }
-}
-
-class MyClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path path = Path();
-    path.lineTo(0, size.height);
-    path.quadraticBezierTo(
-        size.width / 2, size.height * 0.1, size.width, size.height);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }

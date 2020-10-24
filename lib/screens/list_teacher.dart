@@ -1,3 +1,4 @@
+import 'package:absensi_sekolah/components/rounded_profile_button_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:absensi_sekolah/screens/signinv2.dart';
@@ -82,59 +83,19 @@ class _ListTeacherState extends State<ListTeacher> {
                   SizedBox(
                     height: size.height * 0.015,
                   ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
-                    icon: Icons.school,
-                    onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) {
-                        return Signinv2();
-                      }));
-                    },
-                    title: "title",
-                  ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
+                  RoundedProfileButtonV2(
                     onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
+                    conColor: greyColor,
+                    name: "Courtney Henry",
+                    status: "XI - XII, Web programming",
+                    image: AssetImage("assets/images/profile.png"),
                   ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
+                  RoundedProfileButtonV2(
                     onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
-                  ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
-                    onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
-                  ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
-                    onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
-                  ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
-                    onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
-                  ),
-                  RoundedSelectionButtonV2(
-                    allSize: 18,
-                    desc: "desc",
-                    onTap: () {},
-                    title: "title",
-                    icon: Icons.school,
+                    conColor: greyColor,
+                    name: "Kristin Watson",
+                    status: "X, Desain grafis",
+                    image: AssetImage("assets/images/profile.png"),
                   ),
                 ]))),
           )
